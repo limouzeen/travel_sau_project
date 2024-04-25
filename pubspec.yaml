@@ -36,11 +36,12 @@ dependencies:
   geolocator: ^11.0.0
   google_fonts: ^6.2.1
   image_picker: ^1.1.0
+  intl: ^0.19.0
   path_provider: ^2.1.3
   shared_preferences: ^2.2.3
   sqflite: ^2.3.3
   syncfusion_flutter_maps: ^25.1.40
-  uuid: ^4.4.0 #gen code ให้รูปไม่ซ้ำกัน
+  uuid: ^4.4.0
 
 flutter_launcher_icons:
   android: "launcher_icon"

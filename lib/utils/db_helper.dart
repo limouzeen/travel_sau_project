@@ -87,4 +87,19 @@ class DBHelper {
       return null;
     }
   }
+
+  //Method ดึงข้อมูลทั้งหมดจาก traveltb
+  static Future<List<Travel>> getAllTravel() async {
+    // ติดต่อฐานข้อมูล
+    final db = await DBHelper.db();
+
+    //ดึงข้อมูลเก็บในตัวแปร
+    final result = await db.query(
+      'traveltb',
+      orderBy: 'id DESC',
+    );
+
+    //ส่งข้อมูลที่ดึงไปใช้งาน
+    return result.map((data) => Travel.fromMap(data)).toList();
+  }
 }
